@@ -3,6 +3,7 @@ using ProjectManagement.Domain.Entities.Logger;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ProjectTask = ProjectManagement.Domain.Entities.ProjectTask;
 
 namespace ProjectManagement.Infrastructure.Context
 {
@@ -16,6 +17,8 @@ namespace ProjectManagement.Infrastructure.Context
         public DbSet<Otp> Otp { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<UserNotification> UserNotifications { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectTask> Tasks { get; set; }
         public DbSet<Logger> Logger { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

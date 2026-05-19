@@ -61,5 +61,30 @@
             public const string HardDelete = Prefix + "HardDelete/{id}";
             public const string SoftDeleteAndActivate = Prefix + "SoftDeleteAndActivate/{id}";
         }
+        public static class ProjectRouting
+        {
+            public const string Prefix = Root + "Project/";
+            public const string GetById = Prefix + "GetById/{id}";
+            public const string GetList = Prefix + "GetList";
+            public const string GetPaginatedList = Prefix + "GetPaginatedList";
+            public const string GetDropDownList = Prefix + "GetDropDownList";
+            public const string Create = Prefix + "Create";
+            public const string Update = Prefix + "Update";
+            public const string HardDelete = Prefix + "HardDelete/{id}";
+            public const string SoftDeleteAndActivate = Prefix + "SoftDeleteAndActivate/{id}";
+        }
+        public static class TaskRouting
+        {
+            public const string Prefix = Root + "Task/";
+            public const string GetById = Prefix + "GetById/{id}";
+            public const string GetList = Prefix + "GetList";
+            public const string GetPaginatedList = Prefix + "GetPaginatedList";
+            public const string GetDropDownList = Prefix + "GetDropDownList";
+            public const string GetProjectTasksPaginatedList = Prefix + "GetProjectTasksPaginatedList";
+            public const string Create = Prefix + "Create";
+            public const string Update = Prefix + "Update";
+            public const string HardDelete = Prefix + "HardDelete/{id}";
+            public const string SoftDeleteAndActivate = Prefix + "SoftDeleteAndActivate/{id}";
+        }
     }
 }
