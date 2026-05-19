@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Features\Authentication\Commands\DTO\**" />
+    <Compile Remove="Features\Authentication\Queries\DTO\**" />
+    <Compile Remove="Features\User\Commands\DTO\**" />
+    <EmbeddedResource Remove="Features\Authentication\Commands\DTO\**" />
+    <EmbeddedResource Remove="Features\Authentication\Queries\DTO\**" />
+    <EmbeddedResource Remove="Features\User\Commands\DTO\**" />
+    <None Remove="Features\Authentication\Commands\DTO\**" />
+    <None Remove="Features\Authentication\Queries\DTO\**" />
+    <None Remove="Features\User\Commands\DTO\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectManagement.Domain\ProjectManagement.Domain.csproj" />
+    <ProjectReference Include="..\ProjectManagement.Infrastructure\ProjectManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\ProjectManagement.Service\ProjectManagement.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Authentication\Dto\" />
+    <Folder Include="Features\Authentication\Queries\Handlers\" />
+    <Folder Include="Features\Authentication\Queries\Request Models\" />
+    <Folder Include="Features\User\Commands\Validator\" />
+    <Folder Include="Mapping\Entities\AuthenticationMapping\QuaryMapping\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNet.Security.OAuth.LinkedIn" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="9.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OAuth" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+  </ItemGroup>
+
+</Project>
