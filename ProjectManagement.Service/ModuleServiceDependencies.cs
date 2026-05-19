@@ -1,6 +1,7 @@
-﻿using ProjectManagement.Service.Service;
+﻿using Microsoft.Extensions.DependencyInjection;
+using ProjectManagement.Service.Service;
 using ProjectManagement.Service.ServiceInterfaces;
-using Microsoft.Extensions.DependencyInjection;
+using TaskManagement.Service.ServiceInterfaces;
 
 namespace ProjectManagement.Service
 {
@@ -19,6 +20,8 @@ namespace ProjectManagement.Service
             services.AddScoped<IOtpService, OtpService>();
             services.AddScoped<INotificationService, NotificationService>();
             services.AddScoped<IUserNotificationService, UserNotificationService>();
+            services.AddScoped<IProjectService, ProjectService>();
+            services.AddScoped<ITaskService, TaskService>();
             return services;
         }
     }

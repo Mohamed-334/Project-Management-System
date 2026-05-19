@@ -14,6 +14,26 @@ namespace ProjectManagement.Domain.Enums
             Resend = 3,
 
         }
+        public enum TaskStatusEnum
+        {
+            [Display(Name = "جاري العمل")]
+            InProgress = 1,
+            [Display(Name = "اكتمل")]
+            Completed = 2,
+            [Display(Name = "تم الالغاء")]
+            Cancelled = 3,
+        }
+        public enum TaskPriorityEnum
+        {
+            [Display(Name = "حرج")]
+            Critical = 1,
+            [Display(Name = "اولوية عليا")]
+            High = 2,
+            [Display(Name = "اولوية متوسطة")]
+            Medium = 3,
+            [Display(Name = "اولوية منخفظة")]
+            Low = 4,
+        }
         #endregion
 
         #region method

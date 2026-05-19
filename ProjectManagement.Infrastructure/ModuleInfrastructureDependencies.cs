@@ -17,6 +17,8 @@ namespace ProjectManagement.Infrastructure
             Services.AddScoped(typeof(IOtpRepository), typeof(OtpRepository));
             Services.AddScoped(typeof(INotificationRepository), typeof(NotificationRepository));
             Services.AddScoped(typeof(IUserNotificationRepository), typeof(UserNotificationRepository));
+            Services.AddScoped(typeof(ITaskRepository), typeof(TaskRepository));
+            Services.AddScoped(typeof(IProjectRepository), typeof(ProjectRepository));
             Services.AddScoped<LoggerSaveChangesInterceptor>();
             return Services;
         }
